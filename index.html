@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Reproductor</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="player">
+            <div class="player-overlay">
+                <h2 class="player-title">Musica para programar</h2>
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="Retroceder 10 seg" title="Retroceder 10 seg"></button>
+                    <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
+                    <button class="button" hidden id="pause" aria-label="Pausar" title="Pausar"></button>
+                    <button class="button" id="forward" aria-label="Adelantar 10 seg" title="Adelantar 10 seg"></button>
+                </div>
+                <div class="player-progress">
+                    <input type="range" id="progress" min="0" value="0" step="1">
+                </div>
+            </div>
+            <video id="video" poster="./images/poster.jpg" src="./videos/lofi.mp4" width="480">
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+<!--
+div: para agrupar conjuntos 
+botton:
+    el hidden es para ocultar el mismo
+    aria-label y title son similares pero title lo podes ver cuando pasar por encima del boton
+    y aria-label funciona para la accesibilidad del la pagina
+video:
+    poster te devuelve una imagen que aparecerá antes de que comience a reporducir
+-->
